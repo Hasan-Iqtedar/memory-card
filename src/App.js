@@ -1,17 +1,24 @@
 import React from "react";
 import Card from "./components/Card";
+import Grid from "./components/Grid";
 import test from "./test.jpeg";
+import index from "./index.jpeg";
 
 const App = () => {
+  const images = [test, index, test, index, test, index, test, index, test];
+
   return (
     <div>
-      <p>Hello World</p>
-      <Card>
-        <div className="image-container">
-          <img src={test} alt="kitten" />
-        </div>
-        <span className="caption">Hello</span>
-      </Card>
+      <Grid>
+        {images.map((item, index) => {
+          return (
+            <Card>
+              <img src={item} alt="kitten" />
+              <span className="caption">Hello</span>
+            </Card>
+          );
+        })}
+      </Grid>
     </div>
   );
 };
