@@ -2,7 +2,17 @@ import React from "react";
 import "./../styles/main.css";
 
 const Card = (props) => {
-  return <div className="card">{props.children}</div>;
+  const updateScores = () => {
+    props.updateScore();
+    props.updateBestScore();
+    props.shuffle();
+  };
+
+  return (
+    <div className="card" onClick={updateScores}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Card;
