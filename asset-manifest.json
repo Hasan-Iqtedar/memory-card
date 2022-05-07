@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.9e17bcc8.css",
+    "main.js": "/memory-card/static/js/main.82efbb92.js",
+    "static/media/cat8.jpeg": "/memory-card/static/media/cat8.bde58da47891c8a2642c.jpeg",
+    "static/media/cat6.jpeg": "/memory-card/static/media/cat6.9a5c14652760c207ade4.jpeg",
+    "static/media/cat5.jpeg": "/memory-card/static/media/cat5.f20721d014756364fff3.jpeg",
+    "static/media/cat7.jpeg": "/memory-card/static/media/cat7.8c0b30a52fa6ad460e35.jpeg",
+    "static/media/cat4.jpeg": "/memory-card/static/media/cat4.68d46359894cda4eccad.jpeg",
+    "static/media/cat3.jpeg": "/memory-card/static/media/cat3.1007ab80b284e5eaa3ce.jpeg",
+    "static/media/cat9.jpeg": "/memory-card/static/media/cat9.d109164f4b4a23857ec3.jpeg",
+    "static/media/cat2.jpeg": "/memory-card/static/media/cat2.f5995d21302dfb5fb17b.jpeg",
+    "static/media/cat1.jpeg": "/memory-card/static/media/cat1.8e73d30cb5b2b3c99ab6.jpeg",
+    "index.html": "/memory-card/index.html",
+    "main.9e17bcc8.css.map": "/memory-card/static/css/main.9e17bcc8.css.map",
+    "main.82efbb92.js.map": "/memory-card/static/js/main.82efbb92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e17bcc8.css",
+    "static/js/main.82efbb92.js"
+  ]
+}
