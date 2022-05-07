@@ -8,6 +8,7 @@ import index from "./index.jpeg";
 const App = () => {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  const [clickedImages, setClickedImages] = useState([]);
   const [images, setImages] = useState([
     { data: test, id: 0 },
     { data: index, id: 1 },
@@ -21,8 +22,23 @@ const App = () => {
   ]);
 
   const resetScore = () => setScore(0);
+  const resetClickedImages = () => setClickedImages([]);
   const incrementScore = () => setScore(score + 1);
-  const incrementBestScore = () => setBestScore(bestScore + 1);
+
+  useEffect(() => {
+    if (score > bestScore) {
+      setBestScore(score);
+    }
+  }, [score, bestScore]);
+
+  const compareClickedImages = (id) =>
+    clickedImages.findIndex((value) => value === id) !== -1;
+
+  const updateClickedImages = (id) => {
+    let updatedList = [...clickedImages];
+    updatedList = [...updatedList, id];
+    setClickedImages(updatedList);
+  };
 
   const shuffle = () => {
     const shuffledImages = [...images];
@@ -33,14 +49,8 @@ const App = () => {
       shuffledImages[i] = shuffledImages[randomIndex];
       shuffledImages[randomIndex] = temp;
     }
-
     setImages(shuffledImages);
   };
-
-  useEffect(() => {
-    console.log(`score: ${score}\nbest score: ${bestScore}\n________________`);
-    console.log(images[2]);
-  }, [score, bestScore, images]);
 
   return (
     <div>
@@ -57,10 +67,15 @@ const App = () => {
         {images.map((item) => {
           return (
             <Card
+              resetScore={resetScore}
               updateScore={incrementScore}
-              updateBestScore={incrementBestScore}
               shuffle={shuffle}
+              clickedImages={clickedImages}
+              updateClickedImages={updateClickedImages}
+              compareClickedImages={compareClickedImages}
+              resetClickedImages={resetClickedImages}
               key={item.id}
+              id={item.id}
             >
               <img src={item.data} alt="kitten" />
               <span className="caption">Hello</span>

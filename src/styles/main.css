@@ -10,8 +10,6 @@ body {
     border-radius: 7px;
     background-color: rgb(243, 247, 247);
     box-shadow: 3px 3px 5px rgb(190, 189, 189);
-    /* margin: auto; */
-    /* border: 1px solid red; */
 }
 
 .card:hover {
@@ -21,7 +19,6 @@ body {
 
 .image-container {
     height: 85%;
-    /* background-color: gray; */
     border-radius: 7px;
 }
 
@@ -46,7 +43,6 @@ img {
     row-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    border: 1px solid black;
     width: 600px;
     height: 600px;
     margin-top: 10px;
