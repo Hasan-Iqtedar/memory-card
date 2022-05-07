@@ -3,8 +3,8 @@ body {
 }
 
 .card {
-    width: 150px;
-    height: 180px;
+    width: 130px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     border-radius: 7px;
@@ -13,8 +13,8 @@ body {
 }
 
 .card:hover {
-    width: 153px;
-    height: 183px;
+    width: 133px;
+    height: 163px;
 }
 
 .image-container {
@@ -41,10 +41,10 @@ img {
     display: grid;
     column-gap: 5px;
     row-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 600px;
-    height: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 300px;
+    height: 1000px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -57,6 +57,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+    min-width: 300px;
     height: 60px;
 }
 
@@ -66,6 +67,7 @@ img {
     justify-content: center;
     text-align: center;
     width: 30%;
+    min-width: 120px;
     height: 30px;
     box-shadow: 2px 2px 5px lightgray;
     border-radius: 20px;
@@ -73,4 +75,21 @@ img {
 
 .score-card-text {
     color: maroon;
+}
+
+@media (min-width: 600px) {
+    .grid {
+        width: 600px;
+        height: 600px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }   
+    .card {
+        width: 150px;
+        height: 180px;
+    }    
+    .card:hover {
+        width: 153px;
+        height: 183px;
+    }
 }
