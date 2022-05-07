@@ -2,24 +2,14 @@ import React, { useEffect, useState } from "react";
 import Card from "./components/Card";
 import Grid from "./components/Grid";
 import ScoreCard from "./components/ScoreCard";
-import test from "./test.jpeg";
-import index from "./index.jpeg";
+
+import { imagesData } from "./images";
 
 const App = () => {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [clickedImages, setClickedImages] = useState([]);
-  const [images, setImages] = useState([
-    { data: test, id: 0 },
-    { data: index, id: 1 },
-    { data: test, id: 2 },
-    { data: index, id: 3 },
-    { data: test, id: 4 },
-    { data: index, id: 5 },
-    { data: test, id: 6 },
-    { data: index, id: 7 },
-    { data: test, id: 8 },
-  ]);
+  const [images, setImages] = useState(imagesData);
 
   const resetScore = () => setScore(0);
   const resetClickedImages = () => setClickedImages([]);
@@ -78,7 +68,7 @@ const App = () => {
               id={item.id}
             >
               <img src={item.data} alt="kitten" />
-              <span className="caption">Hello</span>
+              <span className="caption">{item.title}</span>
             </Card>
           );
         })}
